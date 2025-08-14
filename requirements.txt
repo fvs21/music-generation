@@ -1,0 +1,6 @@
+torch
+mitdeeplearning
+ipython
+numpy
+scipy
+matplotlib
