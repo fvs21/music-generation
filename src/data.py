@@ -30,7 +30,7 @@ def get_batch(vectorized_songs: ndarray, sequence_len: int, batch_size: int) -> 
     idx = random.choice(n - sequence_len, batch_size)
 
     input_batch = [vectorized_songs[i:i+sequence_len] for i in idx]
-    output_batch = [vectorized_songs[i+1:i+sequence_len] for i in idx]
+    output_batch = [vectorized_songs[i+1:i+sequence_len+1] for i in idx]
 
     x_batch = tensor(input_batch, dtype=long)
     y_batch = tensor(output_batch, dtype=long)
